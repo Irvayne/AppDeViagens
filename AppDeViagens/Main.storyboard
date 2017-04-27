@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="39W-oR-bWb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lugares Table View Controller-->
+        <scene sceneID="wx9-bh-ddx">
+            <objects>
+                <tableViewController id="39W-oR-bWb" customClass="LugaresTableViewController" customModule="AppDeViagens" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="187" sectionHeaderHeight="28" sectionFooterHeight="28" id="BxA-4z-WIJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lugarIdentifier" rowHeight="187" id="cxn-cM-KYw" customClass="LugarTableViewCell" customModule="AppDeViagens" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="187"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxn-cM-KYw" id="tmh-zT-Zc3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="186"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gf0-kB-P83">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="187.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="gf0-kB-P83" secondAttribute="height" multiplier="4:2" id="anU-7Z-qB7"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CX1-jK-Y4k">
+                                            <rect key="frame" x="8" y="157" width="359" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="gf0-kB-P83" firstAttribute="top" secondItem="tmh-zT-Zc3" secondAttribute="top" id="85x-OE-nS8"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="CX1-jK-Y4k" secondAttribute="trailing" id="FJi-C5-gc1"/>
+                                        <constraint firstAttribute="trailing" secondItem="gf0-kB-P83" secondAttribute="trailing" id="OR2-lF-wop"/>
+                                        <constraint firstItem="gf0-kB-P83" firstAttribute="leading" secondItem="tmh-zT-Zc3" secondAttribute="leading" id="Uj2-5D-zWx"/>
+                                        <constraint firstItem="CX1-jK-Y4k" firstAttribute="bottom" secondItem="gf0-kB-P83" secondAttribute="bottom" constant="-10" id="gr6-B9-Exn"/>
+                                        <constraint firstItem="CX1-jK-Y4k" firstAttribute="leading" secondItem="tmh-zT-Zc3" secondAttribute="leadingMargin" id="knL-FV-UBx"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fotoImageView" destination="gf0-kB-P83" id="qzf-b5-Jyj"/>
+                                    <outlet property="nomeFoto" destination="CX1-jK-Y4k" id="o5j-VA-EYw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="39W-oR-bWb" id="jTg-kq-Msh"/>
+                            <outlet property="delegate" destination="39W-oR-bWb" id="TwN-ta-Flt"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYF-8e-xmv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="113.79310344827587"/>
+        </scene>
+    </scenes>
+</document>
